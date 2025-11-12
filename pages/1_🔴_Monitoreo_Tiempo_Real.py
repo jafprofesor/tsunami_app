@@ -18,9 +18,9 @@ st.set_page_config(
 def load_model():
     """Cargar modelo, scaler y características"""
     try:
-        model = joblib.load('../model.pkl')
-        scaler = joblib.load('../scaler.pkl')
-        with open('../features.json', 'r') as f:
+        model = joblib.load('model.pkl')
+        scaler = joblib.load('scaler.pkl')
+        with open('features.json', 'r') as f:
             feature_names = json.load(f)
         return model, scaler, feature_names
     except Exception as e:
